@@ -735,6 +735,74 @@
         margin: 8px 0;
         color: #444;
       }
+      .logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+      }
+
+      .whatsapp-float img {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+      .feedback-map-container {
+        display: flex;
+        gap: 10%;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .feedback-card {
+        width: 100%;
+      }
+
+      .map-box {
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .price-section {
+        text-align: center;
+        background: #f8f9fb;
+      }
+
+      .price-grid {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
+
+      .price-card {
+        width: 100%;
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        width: 250px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+      }
+
+      .price-card:hover {
+        transform: translateY(-5px);
+      }
 
       /* ─── RESPONSIVE ──────────────────────────── */
 
@@ -908,73 +976,6 @@
         .feedback-card {
           padding: 20px;
         }
-      }
-      .logo-wrap {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-
-      .logo-img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-      .whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 999;
-      }
-
-      .whatsapp-float img {
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      }
-      .feedback-map-container {
-        display: flex;
-        gap: 10%;
-        justify-content: space-between;
-        align-items: stretch;
-      }
-
-      .feedback-card {
-        width: 45%;
-      }
-
-      .map-box {
-        width: 45%;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      }
-      .price-section {
-        text-align: center;
-        background: #f8f9fb;
-      }
-
-      .price-grid {
-        display: flex;
-        gap: 25px;
-        justify-content: center;
-        margin-top: 30px;
-        flex-wrap: wrap;
-      }
-
-      .price-card {
-        background: white;
-        padding: 25px;
-        border-radius: 15px;
-        width: 250px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-        transition: 0.3s;
-      }
-
-      .price-card:hover {
-        transform: translateY(-5px);
       }
     </style>
   </head>
