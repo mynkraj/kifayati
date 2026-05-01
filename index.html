@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kefayati Cleaners</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
     <style>
@@ -32,7 +35,7 @@
         align-items: center;
         padding: 16px 6%;
         z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
       }
 
       .logo {
@@ -68,7 +71,9 @@
         transition: 0.3s;
       }
 
-      nav a:hover::after { width: calc(100% - 20px); }
+      nav a:hover::after {
+        width: calc(100% - 20px);
+      }
 
       .cta {
         background: black;
@@ -82,7 +87,9 @@
         white-space: nowrap;
         transition: 0.3s;
       }
-      .cta:hover { background: #222; }
+      .cta:hover {
+        background: #222;
+      }
 
       /* ─── HAMBURGER ───────────────────────────── */
       .hamburger {
@@ -103,9 +110,15 @@
         transition: 0.3s;
       }
 
-      .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      .hamburger.open span:nth-child(2) { opacity: 0; }
-      .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
 
       .mobile-menu {
         display: none;
@@ -118,10 +131,12 @@
         flex-direction: column;
         gap: 15px;
         z-index: 999;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       }
 
-      .mobile-menu.open { display: flex; }
+      .mobile-menu.open {
+        display: flex;
+      }
 
       .mobile-menu a {
         text-decoration: none;
@@ -141,13 +156,13 @@
 
       /* ─── HERO ────────────────────────────────── */
       .hero {
-        min-height: 100vh;
+        min-height: auto;
         background: url("/images/2.jpeg") center/cover no-repeat;
         display: flex;
         align-items: center;
         justify-content: space-between;
         position: relative;
-        padding: 100px 6% 160px;
+        padding: 120px 6% 220px;
         gap: 30px;
       }
 
@@ -155,7 +170,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: rgba(0,0,0,0.52);
+        background: rgba(0, 0, 0, 0.52);
       }
 
       .hero-content {
@@ -191,7 +206,10 @@
         transition: 0.3s;
       }
 
-      .hero-btn:hover { background: white; color: black; }
+      .hero-btn:hover {
+        background: white;
+        color: black;
+      }
 
       /* ─── BOOKING CARD ─────────────────────────── */
       .booking-card {
@@ -201,10 +219,10 @@
         flex-shrink: 0;
         padding: 25px;
         border-radius: 20px;
-        background: rgba(255,255,255,0.15);
+        background: rgba(255, 255, 255, 0.15);
         backdrop-filter: blur(15px);
         color: white;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
       }
 
       .booking-card h3 {
@@ -244,7 +262,9 @@
         font-family: "Poppins", sans-serif;
       }
 
-      .booking-card button:hover { background: #222; }
+      .booking-card button:hover {
+        background: #222;
+      }
 
       #bkStatus {
         margin-top: 10px;
@@ -264,15 +284,22 @@
       }
 
       .service-box {
-        background: rgba(255,255,255,0.12);
+        background: rgba(255, 255, 255, 0.12);
         backdrop-filter: blur(10px);
         padding: 20px;
         border-radius: 12px;
         color: white;
       }
 
-      .service-box h3 { margin-bottom: 8px; font-size: 15px; }
-      .service-box p { font-size: 13px; color: #ddd; margin-bottom: 4px; }
+      .service-box h3 {
+        margin-bottom: 8px;
+        font-size: 15px;
+      }
+      .service-box p {
+        font-size: 13px;
+        color: #ddd;
+        margin-bottom: 4px;
+      }
 
       /* ─── SECTIONS ─────────────────────────────── */
       .section {
@@ -293,16 +320,28 @@
         margin-bottom: 20px;
       }
 
-      .trust-desc { color: #555; margin-bottom: 20px; line-height: 1.7; }
+      .trust-desc {
+        color: #555;
+        margin-bottom: 20px;
+        line-height: 1.7;
+      }
 
-      .stats { display: flex; gap: 40px; flex-wrap: wrap; }
+      .stats {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
 
       .stat-num {
         font-size: clamp(1.8rem, 4vw, 2.5rem);
         font-weight: 700;
       }
 
-      .stat-label { color: #777; font-size: 13px; margin-top: 4px; }
+      .stat-label {
+        color: #777;
+        font-size: 13px;
+        margin-top: 4px;
+      }
 
       /* ─── SERVICES SECTION ─────────────────────── */
       .services-grid {
@@ -320,9 +359,17 @@
         max-height: 400px;
       }
 
-      .service-item { margin-bottom: 22px; }
-      .service-item h3 { font-size: 16px; margin-bottom: 5px; }
-      .service-item p { color: #555; font-size: 14px; }
+      .service-item {
+        margin-bottom: 22px;
+      }
+      .service-item h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      .service-item p {
+        color: #555;
+        font-size: 14px;
+      }
 
       /* ─── REVIEWS SECTION ──────────────────────── */
       .reviews-section {
@@ -353,18 +400,36 @@
         background: white;
         padding: 25px;
         border-radius: 18px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
         transition: 0.3s;
       }
 
-      .review-card:hover { transform: translateY(-5px); }
-      .review-text { margin: 10px 0; color: #444; font-size: 14px; }
-      .stars { color: #ffb400; font-size: 18px; }
+      .review-card:hover {
+        transform: translateY(-5px);
+      }
+      .review-text {
+        margin: 10px 0;
+        color: #444;
+        font-size: 14px;
+      }
+      .stars {
+        color: #ffb400;
+        font-size: 18px;
+      }
 
       /* ─── GALLERY SECTION ──────────────────────── */
-      .gallery-section { padding: 60px 6% 20px; }
-      .gallery-section h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; }
-      .gallery-subtitle { color: #666; margin: 10px 0 30px; font-size: 15px; }
+      .gallery-section {
+        padding: 60px 6% 20px;
+      }
+      .gallery-section h2 {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 700;
+      }
+      .gallery-subtitle {
+        color: #666;
+        margin: 10px 0 30px;
+        font-size: 15px;
+      }
 
       .gallery-full {
         display: grid;
@@ -381,7 +446,9 @@
         transition: 0.3s;
       }
 
-      .gallery-full img:hover { transform: scale(1.04); }
+      .gallery-full img:hover {
+        transform: scale(1.04);
+      }
 
       /* ─── FEEDBACK SECTION ─────────────────────── */
       .feedback-section {
@@ -407,7 +474,7 @@
         background: white;
         padding: 30px;
         border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         text-align: left;
       }
 
@@ -443,7 +510,7 @@
       .feedback-card textarea:focus {
         outline: none;
         border-color: #0a9396;
-        box-shadow: 0 0 0 3px rgba(10,147,150,0.15);
+        box-shadow: 0 0 0 3px rgba(10, 147, 150, 0.15);
       }
 
       .btn {
@@ -455,20 +522,27 @@
         font-weight: 600;
         font-size: 14px;
         font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #0a9396, #0c0d0d);
+        background: linear-gradient(135deg, #0a9396, #005f73);
         color: white;
         transition: 0.3s;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
       }
 
       .btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       }
 
-      .feedback-btn { width: 100%; margin-top: 5px; }
+      .feedback-btn {
+        width: 100%;
+        margin-top: 5px;
+      }
 
-      #fbStatus { margin-top: 12px; font-size: 14px; font-weight: 500; }
+      #fbStatus {
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: 500;
+      }
 
       /* ─── FOOTER ───────────────────────────────── */
       footer {
@@ -521,13 +595,145 @@
         transition: 0.3s;
       }
 
-      .footer-btn:hover { background: #222; }
+      .footer-btn:hover {
+        background: #222;
+      }
 
       .footer-copy {
         text-align: center;
         margin-top: 40px;
         color: #ddd;
         font-size: 13px;
+      }
+      .feedback-section {
+        background: #eef2f7;
+        padding: 80px 8%;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      .section-subtitle {
+        color: #666;
+        margin: 10px 0 40px;
+      }
+
+      /* MAIN CONTAINER */
+      .feedback-map {
+        display: flex;
+        justify-content: space-between;
+        gap: 10%;
+        align-items: stretch;
+      }
+
+      /* LEFT */
+      .feedback-card {
+        width: 45%;
+        background: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      .input-row {
+        display: flex;
+        gap: 15px;
+      }
+
+      .feedback-card input,
+      .feedback-card textarea {
+        width: 100%;
+        padding: 14px;
+        margin: 10px 0;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+      }
+
+      .feedback-card textarea {
+        height: 120px;
+        resize: none;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 14px;
+        border-radius: 30px;
+        border: none;
+        background: linear-gradient(135deg, #0a9396, #005f73);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      /* RIGHT */
+      .map-box {
+        width: 45%;
+        text-align: center;
+      }
+
+      .map-box h3 {
+        margin-bottom: 5px;
+        margin-top: 10px;
+      }
+
+      .map-box iframe {
+        width: 90%;
+        height: 260px;
+        border-radius: 15px;
+        border: none;
+        margin-top: 15px;
+      }
+      .pricing-section {
+        background: #f8f9fb;
+        padding: 80px 8%;
+        text-align: center;
+      }
+
+      /* GRID */
+      .pricing-grid {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      /* CARD */
+      .price-card {
+        width: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        text-align: left;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+        min-height: 280px;
+        flex: 0 0 32%;
+      }
+
+      .price-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .price-card h3 {
+        margin-bottom: 10px;
+      }
+
+      .price-card h2 {
+        color: #0a9396;
+        margin: 15px 0;
+      }
+
+      .price-card ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .price-card li {
+        margin: 8px 0;
+        color: #444;
       }
 
       /* ─── RESPONSIVE ──────────────────────────── */
@@ -567,8 +773,13 @@
       /* Mobile — ≤768px */
       @media (max-width: 768px) {
         /* Nav */
-        nav, .cta { display: none; }
-        .hamburger { display: flex; }
+        nav,
+        .cta {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
+        }
 
         /* Hero */
         .hero {
@@ -578,6 +789,7 @@
           padding: 90px 5% 200px;
           text-align: center;
           min-height: 100vh;
+          padding-bottom: 260px;
         }
 
         .hero-content {
@@ -587,7 +799,7 @@
         .booking-card {
           order: 2;
           width: 100%;
-          background: rgba(255,255,255,0.18);
+          background: rgba(255, 255, 255, 0.18);
           margin-top: 20px;
         }
 
@@ -618,16 +830,65 @@
           grid-template-columns: 1fr;
           gap: 30px;
         }
+        .feedback-map {
+          flex-direction: column;
+
+          gap: 25px;
+        }
+
+        .feedback-card,
+        .map-box {
+          width: 100%;
+        }
+
+        .pricing-grid {
+          flex-direction: column;
+        }
+
+        .price-card {
+          width: 100%;
+          flex: 1 1 100%;
+          max-width: 100%;
+        }
+
+        .input-row {
+          flex-direction: column;
+        }
 
         /* Sections */
-        .section { padding: 60px 5%; }
+        .section {
+          padding: 60px 5%;
+        }
         .reviews-section,
-        .feedback-section { padding: 60px 5%; }
-        footer { padding: 50px 5%; }
+        .feedback-section {
+          padding: 60px 5%;
+        }
+        footer {
+          padding: 50px 5%;
+        }
 
         /* Stats */
-        .stats { gap: 25px; justify-content: center; }
-        .trust-grid { text-align: center; }
+        .stats {
+          gap: 25px;
+          justify-content: center;
+        }
+        .trust-grid {
+          text-align: center;
+        }
+        .feedback-map-container {
+          flex-direction: column;
+
+          gap: 20px;
+        }
+
+        .feedback-card,
+        .map-box {
+          width: 100%;
+        }
+
+        .map-box {
+          height: 320px;
+        }
       }
 
       /* Small Mobile — ≤480px */
@@ -648,14 +909,83 @@
           padding: 20px;
         }
       }
+      .logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+      }
+
+      .whatsapp-float img {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+      .feedback-map-container {
+        display: flex;
+        gap: 10%;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+
+      .feedback-card {
+        width: 45%;
+      }
+
+      .map-box {
+        width: 45%;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .price-section {
+        text-align: center;
+        background: #f8f9fb;
+      }
+
+      .price-grid {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
+
+      .price-card {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        width: 250px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        transition: 0.3s;
+      }
+
+      .price-card:hover {
+        transform: translateY(-5px);
+      }
     </style>
   </head>
 
   <body>
-
     <!-- ─── HEADER ──────────────────────── -->
     <header>
-      <div class="logo">Kefayati Cleaners</div>
+      <div class="logo-wrap">
+        <img src="/images/image.png" class="logo-img" />
+        <span>Kefayati Cleaners</span>
+      </div>
 
       <nav>
         <a href="#">Home</a>
@@ -665,7 +995,7 @@
       </nav>
 
       <!-- Desktop CTA -->
-      <a href="#booking" style="text-decoration:none">
+      <a href="#booking" style="text-decoration: none">
         <button class="cta">BOOK OUR SERVICE</button>
       </a>
 
@@ -686,11 +1016,13 @@
 
     <!-- ─── HERO ───────────────────────── -->
     <section class="hero">
-
       <!-- HERO TEXT -->
       <div class="hero-content" data-aos="fade-up">
         <h1>Professional Cleaning<br />Services You Can Trust</h1>
-        <p>Expert home cleaning, water tank, AC, and geyser services available online.</p>
+        <p>
+          Expert home cleaning, water tank, AC, and geyser services available
+          online.
+        </p>
         <a href="#booking"><button class="hero-btn">Book Now</button></a>
       </div>
 
@@ -728,16 +1060,21 @@
         </div>
       </div>
     </section>
+    <a href="https://wa.me/919012444200" target="_blank" class="whatsapp-float">
+      <img src="/images/whatsapp.png" />
+    </a>
 
     <!-- ─── TRUST SECTION ─────────────── -->
-    <section class="section" style="background:#f5f5f5">
+    <section class="section" style="background: #f5f5f5">
       <div class="trust-grid">
         <div data-aos="fade-right">
           <h2 class="trust-title">Your Trusted Cleaning Partner</h2>
         </div>
         <div data-aos="fade-left">
           <p class="trust-desc">
-            We specialize in comprehensive cleaning services, including home, AC, water tank, and geyser cleaning, ensuring a spotless environment for you.
+            We specialize in comprehensive cleaning services, including home,
+            AC, water tank, and geyser cleaning, ensuring a spotless environment
+            for you.
           </p>
           <div class="stats">
             <div>
@@ -754,11 +1091,21 @@
     </section>
 
     <!-- ─── SERVICES SECTION ───────────── -->
-    <section class="section" style="background:#eef2f7" id="services">
-      <h2 style="font-size:clamp(1.8rem,4vw,2.5rem);font-weight:700;margin-bottom:10px" data-aos="fade-up">
+    <section class="section" style="background: #eef2f7" id="services">
+      <h2
+        style="
+          font-size: clamp(1.8rem, 4vw, 2.5rem);
+          font-weight: 700;
+          margin-bottom: 10px;
+        "
+        data-aos="fade-up"
+      >
         Our Cleaning Services
       </h2>
-      <p style="color:#666;margin-bottom:10px;font-size:15px" data-aos="fade-up">
+      <p
+        style="color: #666; margin-bottom: 10px; font-size: 15px"
+        data-aos="fade-up"
+      >
         Expert cleaning solutions for homes. Book online easily.
       </p>
 
@@ -782,24 +1129,74 @@
         </div>
       </div>
     </section>
+    <section class="pricing-section">
+      <h2 class="section-title">Our Pricing</h2>
+      <p class="section-subtitle">
+        Affordable and transparent pricing for all our services.
+      </p>
+
+      <div class="pricing-grid">
+        <!-- CARD 1 -->
+        <div class="price-card">
+          <h3>AC Cleaning</h3>
+          <h2>₹499 - ₹999</h2>
+          <ul>
+            <li>✔ Deep Cleaning</li>
+            <li>✔ Performance Boost</li>
+            <li>✔ Minor Repair</li>
+            <li>✔ Gas Top-up (Extra)</li>
+          </ul>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="price-card">
+          <h3>Water Tank Cleaning</h3>
+          <h2>₹999 - ₹2499</h2>
+          <ul>
+            <li>✔ Complete Tank Cleaning</li>
+            <li>✔ Bacteria Removal</li>
+            <li>✔ Safe Water</li>
+            <li>✔ Outlet Cleaning</li>
+          </ul>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="price-card">
+          <h3>Geyser Service</h3>
+          <h2>₹399 - ₹799</h2>
+          <ul>
+            <li>✔ Wiring Check</li>
+            <li>✔ Heating Element</li>
+            <li>✔ Thermostat Check</li>
+            <li>✔ General Service</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <!-- ─── REVIEWS SECTION ────────────── -->
     <section class="reviews-section">
       <h2 class="reviews-title" data-aos="fade-up">Customer Reviews</h2>
-      <p class="reviews-subtitle" data-aos="fade-up">See what our satisfied clients say about our cleaning services.</p>
+      <p class="reviews-subtitle" data-aos="fade-up">
+        See what our satisfied clients say about our cleaning services.
+      </p>
 
       <div id="reviewsContainer" class="reviews-grid">
         <div class="review-card" data-aos="fade-up">
           <p class="stars">⭐⭐⭐⭐⭐</p>
-          <p class="review-text">I was impressed with the thoroughness of the cleaning service.</p>
-          <b>Raj Patel</b><br />
-          <small>Delhi, India</small>
+          <p class="review-text">
+            I was impressed with the thoroughness of the cleaning service.
+          </p>
+          <b>Raj Singh</b><br />
+          <small>Shanti Nagar, Etah,UP, India</small>
         </div>
-        <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="review-card" data-aos="fade-up">
           <p class="stars">⭐⭐⭐⭐⭐</p>
-          <p class="review-text">Exceptional sofa cleaning service. Highly recommended!</p>
-          <b>Anjali Sharma</b><br />
-          <small>Mumbai, India</small>
+          <p class="review-text">
+            Exceptional sofa cleaning service. Highly recommended!
+          </p>
+          <b>Gopal Sharma</b><br />
+          <small>Aruna Nagar, Etah,UP, India</small>
         </div>
       </div>
     </section>
@@ -807,10 +1204,12 @@
     <!-- ─── GALLERY ────────────────────── -->
     <div class="gallery-section section">
       <h2 data-aos="fade-up">Gallery</h2>
-      <p class="gallery-subtitle" data-aos="fade-up">Explore our cleaning work.</p>
+      <p class="gallery-subtitle" data-aos="fade-up">
+        Explore our cleaning work.
+      </p>
     </div>
 
-    <div class="gallery-full" style="padding:0 6% 60px">
+    <div class="gallery-full" style="padding: 0 6% 60px">
       <img src="/images/1.jpeg" alt="Gallery 1" />
       <img src="/images/4.jpeg" alt="Gallery 2" />
       <img src="/images/5.jpeg" alt="Gallery 3" />
@@ -819,25 +1218,41 @@
 
     <!-- ─── FEEDBACK SECTION ───────────── -->
     <section class="feedback-section">
-      <h2 class="feedback-title" data-aos="fade-up">Customer Feedback</h2>
-      <p class="feedback-subtitle" data-aos="fade-up">Share your experience to help us improve.</p>
+      <h2 class="section-title">Customer Feedback</h2>
+      <p class="section-subtitle">Share your experience to help us improve.</p>
 
-      <div class="feedback-card" data-aos="fade-up">
-        <div class="input-group" style="margin-bottom:0">
-          <input id="fbName" type="text" placeholder="Your Name" />
-          <input id="fbEmail" type="email" placeholder="Your Email" />
-          <input id="fbPhone" type="text" placeholder="Your Phone" style="grid-column:1/-1" />
+      <div class="feedback-map">
+        <!-- LEFT: FORM -->
+        <div class="feedback-card">
+          <div class="input-row">
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+          </div>
+
+          <input type="text" placeholder="Your Phone" />
+
+          <textarea placeholder="Write your feedback..."></textarea>
+
+          <button class="btn">Submit Feedback</button>
         </div>
-        <textarea id="fbMessage" placeholder="Write your feedback..." style="width:100%;margin-top:0"></textarea>
-        <button class="btn feedback-btn" onclick="submitFeedback()">Submit Feedback</button>
-        <p id="fbStatus"></p>
+
+        <!-- RIGHT: MAP -->
+        <div class="map-box">
+          <h3>Our Location</h3>
+          <p>We are located in Etah, Uttar Pradesh.</p>
+
+          <iframe
+            src="https://www.google.com/maps?q=Etah%20Uttar%20Pradesh&output=embed"
+            loading="lazy"
+          >
+          </iframe>
+        </div>
       </div>
     </section>
 
     <!-- ─── FOOTER ─────────────────────── -->
     <footer id="booking">
       <div class="footer-grid">
-
         <div class="footer-col">
           <h3>Services</h3>
           <p>Expert cleaning solutions for your home.</p>
@@ -852,12 +1267,23 @@
 
         <div class="footer-col">
           <h4>SUPPORT / BOOKING</h4>
-          <input class="footer-input" type="email" placeholder="Your email for contact" />
-          <input class="footer-input" type="text" placeholder="Your phone for contact" />
-          <input class="footer-input" type="text" placeholder="Describe your request" />
+          <input
+            class="footer-input"
+            type="email"
+            placeholder="Your email for contact"
+          />
+          <input
+            class="footer-input"
+            type="text"
+            placeholder="Your phone for contact"
+          />
+          <input
+            class="footer-input"
+            type="text"
+            placeholder="Describe your request"
+          />
           <button class="footer-btn">Submit your request now</button>
         </div>
-
       </div>
 
       <p class="footer-copy">© 2026 Kefayati Cleaners. All rights reserved.</p>
@@ -870,7 +1296,9 @@
     <script>
       AOS.init({ duration: 1000, once: true });
 
-      (function(){ emailjs.init("YOUR_PUBLIC_KEY"); })();
+      (function () {
+        emailjs.init("YOUR_PUBLIC_KEY");
+      })();
 
       // Hamburger
       function toggleMenu() {
@@ -899,7 +1327,8 @@
 
         const params = { name, phone, service, message };
 
-        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
+        emailjs
+          .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
           .then(() => {
             status.style.color = "#90ee90";
             status.textContent = "✅ Booking submitted!";
@@ -928,7 +1357,13 @@
           return;
         }
 
-        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", { name, email, phone, message })
+        emailjs
+          .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+            name,
+            email,
+            phone,
+            message,
+          })
           .then(() => {
             status.style.color = "green";
             status.textContent = "✅ Feedback sent successfully!";
@@ -959,6 +1394,5 @@
         document.getElementById("message").value = "";
       }
     </script>
-
   </body>
 </html>
