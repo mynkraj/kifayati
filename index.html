@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kefayati Cleaners</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* FORM UI UPGRADE */
+      form input,
+      form textarea,
+      form select {
+        width: 100%;
+        padding: 14px 16px;
+        margin: 12px 0;
+        border-radius: 10px;
+        border: 1px solid #dcdcdc;
+        background: #ffffff;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      form input:focus,
+      form textarea:focus,
+      form select:focus {
+        outline: none;
+        border-color: #0a9396;
+        box-shadow: 0 0 0 3px rgba(10, 147, 150, 0.15);
+      }
+
+      form textarea {
+        min-height: 120px;
+        resize: none;
+      }
+
+      form .btn {
+        width: 100%;
+        padding: 14px;
+        border-radius: 30px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        background: linear-gradient(135deg, #0a9396, #005f73);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      form .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .section form {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      #fbStatus {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      body {
+        background: #f5f5f5;
+      }
+
+      /* NAVBAR */
+      header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 8%;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 20px;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        position: relative;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: black;
+        transition: 0.3s;
+      }
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      .cta {
+        background: black;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 25px;
+        border: none;
+      }
+
+      /* HERO */
+      .hero {
+        height: 100vh;
+        background: url("https://images.unsplash.com/photo-1581578731548-c64695cc6952")
+          center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        position: relative;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+      }
+
+      .hero p {
+        margin: 20px 0;
+        color: #ddd;
+      }
+
+      .hero button {
+        padding: 12px 30px;
+        border-radius: 30px;
+        border: 1px solid white;
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .hero button:hover {
+        background: white;
+        color: black;
+      }
+
+      /* SERVICE BOXES OVER HERO */
+      .service-overlay {
+        position: absolute;
+        bottom: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        width: 80%;
+      }
+
+      .service-box {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 25px;
+        border-radius: 10px;
+        color: white;
+        text-align: left;
+      }
+
+      .service-box h3 {
+        margin-bottom: 10px;
+      }
+
+      /* SECTION */
+      .section {
+        padding: 150px 8% 80px;
+        width:auto;
+      }
+
+      /* REVIEW CARD FIX */
+.review {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* REMOVE INLINE STYLE */
+.gallery-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* FULL WIDTH GRID */
+.gallery-full {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  padding: 0 10px;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* IMAGE STYLE */
+.gallery-full img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* REMOVE GAPS (important) */
+.gallery-full {
+  gap: 20px;
+}
+
+/* HOVER EFFECT (optional premium) */
+.gallery-full img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .gallery-full {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-full {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FORM CARD FIX */
+.form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* INPUT HOVER */
+input:hover, textarea:hover {
+  border-color: #0a9396;
+}
+/* FOOTER RESPONSIVE */
+footer input {
+  outline: none;
+}
+
+footer button:hover {
+  background: #222;
+}
+
+/* SECTION */
+.reviews-section {
+  background: #f8f9fb;
+  padding: 100px 8%;
+  text-align: center;
+}
+
+/* TITLE */
+.reviews-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* SUBTITLE */
+.reviews-subtitle {
+  color: #666;
+  margin: 15px 0 40px;
+}
+
+/* GRID */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.review-card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  text-align: left;
+  transition: 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+/* TEXT */
+.review-text {
+  margin: 10px 0;
+  color: #444;
+}
+
+.stars {
+  color: #ffb400;
+  font-size: 18px;
+}
+
+/* FORM */
+.review-form-container {
+  margin-top: 50px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* INPUTS */
+.review-form-container input,
+.review-form-container textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.review-form-container input:focus,
+.review-form-container textarea:focus {
+  outline: none;
+  border-color: #0a9396;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+  footer div {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+}
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+        .service-overlay {
+          grid-template-columns: 1fr;
+          position: static;
+          margin-top: 20px;
+        }
+      }
+/* SECTION */
+.feedback-section {
+  background: #eef2f7;
+  padding: 100px 8%;
+  text-align: center;
+}
+
+/* TITLE */
+.feedback-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* SUBTITLE */
+.feedback-subtitle {
+  color: #666;
+  margin: 15px 0 40px;
+}
+
+/* CARD */
+.feedback-card {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+/* INPUT ROW */
+.input-group {
+  display: flex;
+  gap: 15px;
+}
+
+/* INPUTS */
+.feedback-card input,
+.feedback-card textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+/* TEXTAREA */
+.feedback-card textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* FOCUS EFFECT */
+.feedback-card input:focus,
+.feedback-card textarea:focus {
+  outline: none;
+  border-color: #0a9396;
+  box-shadow: 0 0 0 3px rgba(10,147,150,0.15);
+}
+
+/* BUTTON */
+.feedback-btn {
+  width: 100%;
+  border-radius: 30px;
+  padding: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* STATUS */
+#fbStatus {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
+}
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Kefayati Cleaners</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#booking">Booking</a>
+        <a href="#booking">Contact</a>
+      </nav>
+      <a href="#booking"><button class="cta">BOOK OUR SERVICE</button></a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Professional Cleaning<br />Services You Can Trust</h1>
+        <p>
+          Expert home cleaning, water tank, AC, and geyser services available
+          online.
+        </p>
+        <a href="#booking"><button>Book Now</button></a>
+      </div>
+
+      <div class="service-overlay">
+        <div class="service-box" data-aos="fade-up">
+          <h3>AC Cleaning</h3>
+          <p>Boost your AC performance with expert cleaning.</p>
+        </div>
+
+        <div class="service-box" data-aos="fade-up" data-aos-delay="100">
+          <h3>Water Tank Cleaning</h3>
+          <p>Ensure clean water with our thorough service.</p>
+        </div>
+
+        <div class="service-box" data-aos="fade-up" data-aos-delay="200">
+          <h3>Geyser Service</h3>
+          <p>Improve lifespan and efficiency of your geyser.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST SECTION -->
+    <section class="section" style="background: #f5f5f5">
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+          align-items: center;
+        "
+      >
+        <div data-aos="fade-right">
+          <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 20px">
+            Your Trusted Cleaning Partner
+          </h2>
+        </div>
+
+        <div data-aos="fade-left">
+          <p style="color: #555; margin-bottom: 20px">
+            We specialize in comprehensive cleaning services, including home,
+            AC, water tank, and geyser cleaning, ensuring a spotless environment
+            for you.
+          </p>
+
+          <div style="display: flex; gap: 40px">
+            <div>
+              <h1 style="font-size: 2.5rem; font-weight: 700">120000</h1>
+              <p style="color: #777">Customer Satisfaction</p>
+            </div>
+
+            <div>
+              <h1 style="font-size: 2.5rem; font-weight: 700">1500</h1>
+              <p style="color: #777">Professional Service Guaranteed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMAGE -->
+      <!--<div style="margin-top: 50px" data-aos="zoom-in">
+        <img
+          src="https://bit.ly/4w47ghE"
+          style="width: 100%; border-radius: 20px"
+        />
+      </div>-->
+    </section>
+
+    <!-- OUR CLEANING SERVICES SECTION -->
+    <section class="section" style="background: #eef2f7" id="services">
+      <h2
+        style="font-size: 2.5rem; font-weight: 700; margin-bottom: 10px"
+        data-aos="fade-up"
+      >
+        Our Cleaning Services
+      </h2>
+      <p style="color: #666; margin-bottom: 40px" data-aos="fade-up">
+        Expert cleaning solutions for homes. Book online easily.
+      </p>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+          align-items: center;
+        "
+      >
+        <!-- LEFT IMAGE -->
+        <div data-aos="fade-right">
+          <img
+            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80"
+            style="width: 100%; border-radius: 20px"
+          />
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div data-aos="fade-left">
+          <div style="margin-bottom: 20px">
+            <h3>AC Cleaning</h3>
+            <p style="color: #555">
+              Boost your AC performance with deep cleaning service.
+            </p>
+          </div>
+
+         <!-- <div style="margin-bottom: 20px">
+            <h3>Home Cleaning Services</h3>
+            <p style="color: #555">
+              Professional cleaning tailored to your needs.
+            </p>
+          </div>
+
+          <div style="margin-bottom: 20px">
+            <h3>Sofa Cleaning</h3>
+            <p style="color: #555">
+              Revitalize your sofas with specialized cleaning.
+            </p>
+          </div>-->
+
+          <div style="margin-bottom: 20px">
+            <h3>Water Tank Cleaning</h3>
+            <p style="color: #555">
+              Ensure safe and pure water with expert cleaning.
+            </p>
+          </div>
+
+          <div>
+            <h3>Geyser Service</h3>
+            <p style="color: #555">
+              Improve performance and lifespan of geysers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS SECTION -->
+    <section class="reviews-section">
+  <h2 class="reviews-title" data-aos="fade-up">
+    Customer Reviews
+  </h2>
+
+  <p class="reviews-subtitle" data-aos="fade-up">
+    See what our satisfied clients say about our cleaning services.
+  </p>
+
+  <div id="reviewsContainer" class="reviews-grid">
+    
+    <div class="review-card" data-aos="fade-up">
+      <p class="stars">⭐⭐⭐⭐⭐</p>
+      <p class="review-text">
+        I was impressed with the thoroughness of the cleaning service.
+      </p>
+      <b>Raj Patel</b><br />
+      <small>Delhi, India</small>
+    </div>
+
+    <div class="review-card" data-aos="fade-up">
+      <p class="stars">⭐⭐⭐⭐⭐</p>
+      <p class="review-text">
+        Exceptional sofa cleaning service. Highly recommended!
+      </p>
+      <b>Anjali Sharma</b><br />
+      <small>Mumbai, India</small>
+    </div>
+
+  </div>
+
+  <!-- FORM -->
+  <!-- <div class="review-form-container" data-aos="fade-up">
+  <h3>Add Your Review</h3>
+
+  <div class="review-form-row">
+    <input type="text" id="name" placeholder="Your Name" />
+    <input type="text" id="location" placeholder="Location" />
+    <textarea id="message" placeholder="Your Review"></textarea>
+  </div>
+
+  <button class="btn submit-btn" onclick="addReview()">Submit Review</button>
+</div> -->
+
+    <!-- GALLERY SECTION -->
+    <section class="section">
+  <h2 data-aos="fade-up">Gallery</h2>
+  <p class="gallery-subtitle" data-aos="fade-up">
+    Explore our cleaning work.
+  </p>
+</section>
+
+<!-- FULL WIDTH GALLERY -->
+<div class="gallery-full">
+  <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" />
+  <img src="https://images.unsplash.com/photo-1598514982901-1b36d0e0e2b7?auto=format&fit=crop&w=600&q=80" />
+  <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" />
+  <img src="https://images.unsplash.com/photo-1581092335878-3c1e3c3b3b3b?auto=format&fit=crop&w=600&q=80" />
+</div>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+
+      // Add Review Function
+      function addReview() {
+        const name = document.getElementById("name").value;
+        const location = document.getElementById("location").value;
+        const message = document.getElementById("message").value;
+
+        if (!name || !message) return alert("Please fill required fields");
+
+        const container = document.getElementById("reviewsContainer");
+
+        const div = document.createElement("div");
+        div.className = "review";
+        div.innerHTML = `<p>⭐⭐⭐⭐⭐</p><p>${message}</p><b>${name}</b><br><small>${location}</small>`;
+
+        container.appendChild(div);
+
+        document.getElementById("name").value = "";
+        document.getElementById("location").value = "";
+        document.getElementById("message").value = "";
+      }
+    </script>
+
+<!-- FEEDBACK SECTION -->
+<section class="feedback-section">
+  <h2 class="feedback-title" data-aos="fade-up">Customer Feedback</h2>
+
+  <p class="feedback-subtitle" data-aos="fade-up">
+    Share your experience to help us improve.
+  </p>
+
+  <div class="feedback-card" data-aos="fade-up">
+    <div class="input-group">
+      <input id="fbName" type="text" placeholder="Your Name" />
+      <input id="fbEmail" type="email" placeholder="Your Email" />
+      <input id="fbPhone" type="text" placeholder="Your Phone" />
+    </div>
+
+    <textarea id="fbMessage" placeholder="Write your feedback..."></textarea>
+
+    <button class="btn feedback-btn" onclick="submitFeedback()">
+      Submit Feedback
+    </button>
+
+    <p id="fbStatus"></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#6b86a6; color:white; padding:60px 8%;" id="booking">
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px; align-items:center">
+
+    <!-- LEFT -->
+    <div>
+      <h3 style="margin-bottom:15px">Services</h3>
+      <p style="color:#e0e0e0">Expert cleaning solutions for your home.</p>
+
+      <!-- <div style="margin-top:20px; display:flex; gap:15px">
+        <span>📷</span>
+        <span>📘</span>
+        <span>▶️</span>
+      </div>-->
+    </div>
+
+    <!-- CENTER -->
+    <div>
+      <h4 style="margin-bottom:10px">CONTACT</h4>
+      <p>+91-9012444200</p>
+      <p>+91-6398233956</p>
+      <p>kifayatikleaners@gmail.com</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div>
+      <h4 style="margin-bottom:10px">SUPPORT/BOOKING/CONTACT</h4>
+      <input type="email" placeholder="Your email for contact"
+        style="width:100%; padding:12px; border-radius:10px; border:none; margin-bottom:15px">
+        <input type="text" placeholder="Your phone for contact"
+        style="width:100%; padding:12px; border-radius:10px; border:none; margin-bottom:15px">
+        <input type="text" placeholder="Describe your request"
+        style="width:100%; padding:12px; border-radius:10px; border:none; margin-bottom:15px">
+
+      <button style="width:100%; padding:12px; border:none; border-radius:25px; background:black; color:white">
+        Submit your request now
+      </button>
+    </div>
+
+  </div>
+
+  <!-- COPYRIGHT -->
+  <p style="text-align:center; margin-top:40px; color:#ddd">
+    © 2026 Kefayati Cleaners. All rights reserved.
+  </p>
+</footer>
+
+<script>
+  // Feedback (frontend only)
+  function submitFeedback() {
+    const name = document.getElementById("fbName").value.trim();
+    const email = document.getElementById("fbEmail").value.trim();
+    const message = document.getElementById("fbMessage").value.trim();
+    const status = document.getElementById("fbStatus");
+
+    if (!name || !message) {
+      status.style.color = "red";
+      status.textContent = "Please enter your name and feedback.";
+      return;
+    }
+
+    const data = JSON.parse(localStorage.getItem("kefayati_feedback") || "[]");
+    data.push({ name, email, message, date: new Date().toISOString() });
+    localStorage.setItem("kefayati_feedback", JSON.stringify(data));
+
+    status.style.color = "green";
+    status.textContent = "Thanks! Your feedback has been recorded.";
+
+    document.getElementById("fbName").value = "";
+    document.getElementById("fbEmail").value = "";
+    document.getElementById("fbMessage").value = "";
+  }
+</script>
+</body>
+</html>
