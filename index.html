@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kefayati Cleaners</title>
+    <title>Kefayati Kleaners</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -985,7 +985,7 @@
     <header>
       <div class="logo-wrap">
         <img src="/images/image.png" class="logo-img" />
-        <span>Kefayati Cleaners</span>
+        <span>Kefayati Kleaners</span>
       </div>
 
       <nav>
@@ -1032,13 +1032,13 @@
         <h3>Book a Service</h3>
         <input type="text" id="bkName" placeholder="Your Name" />
         <input type="tel" id="bkPhone" placeholder="Phone Number" />
+        <input type="email" id="bkEmail" placeholder="Email Address" />
         <select id="bkService">
           <option value="">Select Service</option>
           <option>AC Cleaning</option>
           <option>Water Tank Cleaning</option>
           <option>Geyser Service</option>
         </select>
-        <input type="file" id="bkImages" multiple accept="image/*" />
         <textarea id="bkMessage" placeholder="Describe your issue"></textarea>
         <button onclick="submitBooking()">Book Now</button>
         <p id="bkStatus"></p>
@@ -1287,7 +1287,7 @@
         </div>
       </div>
 
-      <p class="footer-copy">© 2026 Kefayati Cleaners. All rights reserved.</p>
+      <p class="footer-copy">© 2026 Kefayati Kleaners. All rights reserved.</p>
     </footer>
 
     <!-- ─── SCRIPTS ────────────────────── -->
@@ -1298,7 +1298,7 @@
       AOS.init({ duration: 1000, once: true });
 
       (function () {
-        emailjs.init("YOUR_PUBLIC_KEY");
+        emailjs.init("ATrPMiHfwJ_ARjRMi");
       })();
 
       // Hamburger
@@ -1316,25 +1316,27 @@
       function submitBooking() {
         const name = document.getElementById("bkName").value.trim();
         const phone = document.getElementById("bkPhone").value.trim();
+        const email = document.getElementById("bkEmail").value.trim();
         const service = document.getElementById("bkService").value;
         const message = document.getElementById("bkMessage").value.trim();
         const status = document.getElementById("bkStatus");
 
-        if (!name || !phone || !service) {
+        if (!name || !phone || !email || !service) {
           status.style.color = "orange";
           status.textContent = "⚠️ Please fill all required fields.";
           return;
         }
 
-        const params = { name, phone, service, message };
+        const params = { name, phone, email, service, message };
 
         emailjs
-          .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
+          .send("service_2vipgi5", "template_ow5eghq", params)
           .then(() => {
             status.style.color = "#90ee90";
             status.textContent = "✅ Booking submitted!";
             document.getElementById("bkName").value = "";
             document.getElementById("bkPhone").value = "";
+            document.getElementById("bkEmail").value = "";
             document.getElementById("bkService").value = "";
             document.getElementById("bkMessage").value = "";
           })
@@ -1352,14 +1354,14 @@
         const message = document.getElementById("fbMessage").value.trim();
         const status = document.getElementById("fbStatus");
 
-        if (!name || !message) {
+        if (!name || !email || !message) {
           status.style.color = "red";
-          status.textContent = "Please enter your name and feedback.";
+          status.textContent = "Please enter your name, email, and feedback.";
           return;
         }
 
         emailjs
-          .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+          .send("service_2vipgi5", "template_aw4w144", {
             name,
             email,
             phone,
