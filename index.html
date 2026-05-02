@@ -1326,8 +1326,8 @@
           status.textContent = "⚠️ Please fill all required fields.";
           return;
         }
-
-        const params = { name, phone, email, service, message };
+        const time = new Date().toLocaleString();
+        const params = { name, phone, email, service, message, time };
 
         emailjs
           .send("service_2vipgi5", "template_ow5eghq", params)
