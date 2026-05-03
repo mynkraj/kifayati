@@ -1359,10 +1359,10 @@
     <!-- ── SCRIPTS ── -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-      emailjs.init("ATrPMiHfwJ_ARjRMi");
-      const SVC = "service_2vipgi5";
-      const T_BK = "template_ow5eghq";
-      const T_FB = "template_aegunrg";
+      emailjs.init("MsKYk_ji3TmMpQeZd");
+      const SVC = "service_qniswzq";
+      const T_BK = "template_izm193e";
+      const T_FB = "template_gr8mzdd";
 
       AOS.init({ duration: 1000, once: true });
 
@@ -1507,11 +1507,13 @@
           setStatus("fbStatus", "error", "⚠️ Please write your feedback.");
           return;
         }
+        const email_kk="kifayatikleaners@gmail.com";
         btn.disabled = true;
         btn.innerHTML = '<span class="spinner"></span> Sending...';
         emailjs
           .send(SVC, T_FB, {
             name,
+            email_kk,
             email,
             phone: phone || "Not provided",
             message,
